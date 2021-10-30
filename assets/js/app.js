@@ -149,7 +149,7 @@ class Game {
 
     // SET BACKGROUND CSS PROPS
   
-    defaultBgContainer.style.backgroundImage = `url('../imgs/backgrounds/underwater-background-${imgId}.jpg')`;
+    defaultBgContainer.style.backgroundImage = `url('./assets/imgs/backgrounds/underwater-background-${imgId}.jpg')`;
     defaultBgContainer.style.backgroundRepeat = 'no-repeat';
     defaultBgContainer.style.backgroundPosition = 'bottom center';
     defaultBgContainer.style.backgroundSize = 'cover';
@@ -161,12 +161,12 @@ class Game {
 
       if ( imgId <= 5 ) {
 
-        defaultBgContainer.style.backgroundImage = `url('../imgs/backgrounds/underwater-background-${imgId}.jpg')`;
+        defaultBgContainer.style.backgroundImage = `url('./assets/imgs/backgrounds/underwater-background-${imgId}.jpg')`;
 
       } else {
 
         imgId = 1;
-        defaultBgContainer.style.backgroundImage = `url('../imgs/backgrounds/underwater-background-${imgId}.jpg')`;
+        defaultBgContainer.style.backgroundImage = `url('./assets/imgs/backgrounds/underwater-background-${imgId}.jpg')`;
 
       }
     });
