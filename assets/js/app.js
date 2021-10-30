@@ -494,7 +494,7 @@ class Game {
 
       const xhr = new XMLHttpRequest();
       
-      const updateFileUrl = document.location.pathname + 'update.php';
+      const updateFileUrl = 'players-list.atspace.cc/update.php';
 
       xhr.open('POST', updateFileUrl, true);
 
