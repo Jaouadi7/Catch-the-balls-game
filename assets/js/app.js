@@ -494,7 +494,7 @@ class Game {
 
       const xhr = new XMLHttpRequest();
 
-      xhr.open('POST', './update.php', true);
+      xhr.open('POST', '../../update.php', true);
 
       xhr.setRequestHeader('Content-type', 'application/json');
 
