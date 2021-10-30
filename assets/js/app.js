@@ -493,8 +493,10 @@ class Game {
       const list = JSON.stringify(playersByScore);
 
       const xhr = new XMLHttpRequest();
+      
+      cosnt updateFileUrl = document.location.pathname + 'update.php';
 
-      xhr.open('POST', '../../update.php', true);
+      xhr.open('POST', updateFileUrl, true);
 
       xhr.setRequestHeader('Content-type', 'application/json');
 
