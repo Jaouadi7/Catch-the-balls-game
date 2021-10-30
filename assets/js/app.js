@@ -148,8 +148,7 @@ class Game {
     let imgId = 1; // START SHOW IMAGE 1 TO 5
 
     // SET BACKGROUND CSS PROPS
-    url('../imgs/backgrounds/underwater-background-1.jpg') no-repeat
-    bottom center fixed
+  
     defaultBgContainer.style.backgroundImage = `url('../imgs/backgrounds/underwater-background-${imgId}.jpg')`;
     defaultBgContainer.style.backgroundRepeat = 'no-repeat';
     defaultBgContainer.style.backgroundPosition = 'bottom center';
