@@ -1,1 +1,1 @@
-# Catch-the-balls-game
+# Catch the balls ( JavaScript Game )
