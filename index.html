@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Catch Balls Game</title>
+    <link
+      rel="shortcut icon"
+      href="./assets/imgs/favicon.ico"
+      type="image/x-icon"
+    />
+    <!-- GOOGLE FONT -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Ephesis&display=swap"
+      rel="stylesheet"
+    />
+    <!-- CORE STYLE -->
+    <link rel="stylesheet" href="./assets/css/core.css" />
+  </head>
+  <body>
+    <!-- GAME -->
+    <main id="game" class="catch-balls">
+      <div class="game-container">
+        <!-- WELCOME GAME -->
+        <div class="game-welcome is-centered">
+          <!-- WELCOME PANEL -->
+          <div class="game-welcone-panel">
+            <figure class="image">
+              <img src="./assets/imgs/balls.png" alt="balls" />
+            </figure>
+            <h1>Catching The Balls</h1>
+            <!--  GET PLAYER NAME FORM -->
+            <form id="player-form" action="#" method="post">
+              <div class="field">
+                <input
+                  id="player-name"
+                  type="text"
+                  name="player"
+                  placeholder="Player Name"
+                />
+                <div id="form-msg"></div>
+              </div>
+              <div class="buttons">
+                <button class="submit-btn button" type="submit">
+                  Start the game
+                </button>
+                <a href="#" class="top-player-btn button">Top 10 player</a>
+              </div>
+            </form>
+            <!-- / END GET PLAYER NAME FORM -->
+
+            <!-- COPYRIGHTS -->
+            <p class="copyrights">
+              Coded with love by <a href="#">Eljaouadi</a>
+            </p>
+            <!-- / END COPYRIGHTS -->
+
+            <!-- WAVES FOR STYLING -->
+            <div class="wave wave-1"></div>
+            <div class="wave wave-2"></div>
+
+            <!-- / END WAVES -->
+          </div>
+          <!-- / END WELCOME PANEL -->
+        </div>
+        <!-- WELCOME GAME -->
+
+        <!-- TABLE TOP 10 PLAYERS -->
+        <div class="top-players is-hidden">
+          <div class="players-table-container">
+            <div class="image trophy">
+              <img src="./assets/imgs/trophy.jpeg" alt="top player trophy" />
+            </div>
+            <h2>Top 10 Players</h2>
+            <table>
+              <thead>
+                <tr>
+                  <th>Ranked</th>
+                  <th>Player Name</th>
+                  <th>Score</th>
+                </tr>
+              </thead>
+              <tbody id="player-info-container"></tbody>
+            </table>
+            <button class="button back-btn">Back to the game</button>
+          </div>
+        </div>
+        <!-- END TOP 10 PLAYERS -->
+
+        <!--   GAME DETAILS -->
+        <div class="game-details is-hidden">
+          <!-- PLAYER CARD -->
+          <div class="player-card card">
+            <h3 class="player">Player: <span class="player-name"></span></h3>
+            <div class="life-chances"></div>
+            <h4 class="timer">Countdown: <span class="time-counter"></span></h4>
+          </div>
+          <!-- END PLAYER CARD -->
+          <!-- PLAYER CARD -->
+          <div class="game-card card">
+            <h3 class="score">Score: <span class="current-score"></span></h3>
+            <h4 class="high-score">High score: <span class="record"></span></h4>
+          </div>
+          <!--  / END PLAYER CARD -->
+        </div>
+        <!--  / END GAME DETAILS -->
+      </div>
+      <!--  SETTINGS  -->
+      <div class="game-settings is-hidden">
+        <ul>
+          <li>
+            <!-- UNMUTE SOUND BUTTON -->
+            <button class="button btn-unmuted">
+              <img
+                class="icon-image"
+                src="./assets/imgs/icons/volume-high-outline.svg"
+                alt="unmuted sound"
+              />
+            </button>
+            <!--  / END UNMUTE SOUND BUTTON -->
+            <!-- MUTE SOUND BUTTON -->
+            <button class="button btn-mute">
+              <img
+                class="icon-image"
+                src="./assets/imgs/icons/volume-mute-outline.svg"
+                alt="muted sound"
+              />
+            </button>
+            <!-- / END MUTE SOUND BUTTON -->
+          </li>
+          <li>
+            <!-- CHANGE BACKGROUND IMAGE -->
+            <button class="button change-background-btn">
+              <img
+                class="icon-image"
+                src="./assets/imgs/icons/images-outline.svg"
+                alt="change game backgrounds"
+              />
+              <span>Change Background</span>
+            </button>
+            <!--  /  END CHANGE BACKGROUND IMAG E-->
+          </li>
+        </ul>
+      </div>
+      <!--  / END SETTINGS -->
+
+      <!-- SHOW MESSAGE ( GAME END ) -->
+      <div id="game-status" class="is-hidden is-centered">
+        <h3>Time is Over</h3>
+        <div id="win"></div>
+        <h4 class="player-score"></h4>
+        <a href="#" class="top-player-show-btn button is-hidden"
+          >Top 10 player</a
+        >
+        <button class="button btn-play">play again</button>
+      </div>
+      <!-- END SHOW MESSAGE ( GAME END ) -->
+    </main>
+    <!-- / END GAME -->
+
+    <!-- AUDIOS -->
+    <audio
+      id="bg-sound"
+      src="./assets/audios/background-sound.mp3"
+      type="audio/mp3"
+    ></audio>
+    <audio
+      id="catch-ball"
+      src="./assets/audios/catch-ball.mp3"
+      type="audio/mp3"
+    ></audio>
+    <audio
+      id="mistake"
+      src="./assets/audios/mistake.mp3"
+      type="audio/mp3"
+    ></audio>
+
+    <script src="./assets/js/app.js"></script>
+  </body>
+</html>

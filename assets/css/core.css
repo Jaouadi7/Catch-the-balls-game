@@ -1,0 +1,474 @@
+/* GENERAL SETTINGS */
+
+*,
+*:before,
+*:after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-family: 'Poppins', sans-serif;
+  font-size: 16px;
+  font-weight: 300;
+}
+
+body {
+  color: #2e2e2e;
+}
+
+ul {
+  list-style: none;
+}
+
+button {
+  border: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* HELPERS */
+.is-hidden {
+  display: none !important;
+  pointer-events: none;
+}
+
+.image img {
+  max-width: 100%;
+  width: 100%;
+  height: auto;
+}
+
+/* END HELPERS */
+
+main.catch-balls {
+  background: url('../imgs/backgrounds/underwater-background-1.jpg') no-repeat
+    bottom center fixed;
+  background-size: cover;
+  position: relative;
+  min-height: 100vh;
+  overflow: hidden;
+  transition: all .5s ease-in-out;
+
+}
+
+main.catch-balls .game-container {
+  max-width: 95%;
+  margin: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+  position: relative;
+}
+
+/* WELCOME GAME  */
+main.catch-balls .game-welcome {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+main.catch-balls .game-welcome .game-welcone-panel {
+  width: 450px;
+  background-color: #fff;
+  padding: 2rem;
+  border-radius: 8px;
+  position: relative;
+  overflow: hidden;
+  background-color: #290c5c;
+}
+
+main.catch-balls .game-welcome .game-welcone-panel .wave {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100px;
+  background: url('../imgs/wave.png');
+  background-size: 750px 100px;
+}
+
+main.catch-balls .game-welcome .game-welcone-panel .wave.wave-1 {
+  animation: wave2 15s linear infinite;
+  z-index: 1;
+  opacity: 0.5;
+  bottom: 10px;
+}
+
+@keyframes wave2 {
+  from {
+    background-position-x: 0;
+  }
+  to {
+    background-position-x: -750px;
+  }
+}
+
+main.catch-balls .game-welcome .game-welcone-panel .image {
+  max-width: 200px;
+  margin: 50px auto auto;
+}
+
+main.catch-balls .game-welcome .game-welcone-panel h1 {
+  text-align: center;
+  font-weight: 900;
+  font-family: 'Ephesis', cursive;
+  color: #d5bdff;
+  font-size: 2.75rem;
+  margin-bottom: 15px;
+}
+
+main.catch-balls .game-welcome .game-welcone-panel form .field input {
+  display: flex;
+  width: 100%;
+  padding: 1rem;
+  background-color: #ebd1ff;
+  color: #15003a;
+  font-size: 16px;
+  text-align: center;
+  outline: none;
+  border-radius: 5px;
+  margin-bottom: 15px;
+  font-family: 'Poppins', sans-serif;
+  border: none;
+}
+
+main.catch-balls .game-welcome .game-welcone-panel form .field #form-msg {
+  font-size: 0.85rem;
+  color: #fff;
+  margin-bottom: 15px;
+}
+
+main.catch-balls
+  .game-welcome
+  .game-welcone-panel
+  form
+  .field
+  input::placeholder {
+  color: #15003a;
+}
+
+main.catch-balls .game-welcome .game-welcone-panel .button {
+  padding: 0.8rem 1rem;
+  border-radius: 5px;
+  margin-bottom: 15px;
+  cursor: pointer;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 300;
+}
+
+main.catch-balls .game-welcome .game-welcone-panel .buttons {
+  display: flex;
+  justify-content: space-between;
+}
+
+main.catch-balls .game-welcome .game-welcone-panel .submit-btn {
+  background-color: #553f7c;
+  color: #fff;
+}
+
+main.catch-balls .game-welcome .game-welcone-panel .top-player-btn {
+  color: #fff;
+  background-color: transparent;
+}
+
+.copyrights {
+  text-align: center;
+  font-size: 0.9rem;
+  margin-top: 75px;
+  color: #15003a;
+  position: sticky;
+  z-index: 2;
+}
+
+/* END WELCOME GAME */
+
+/* TOP PLAYERS  */
+
+.top-players {
+  background: #fff;
+  padding: 25px;
+  border-radius: 8px;
+  width: 80%;
+  margin: 25px auto;
+  text-align: center;
+}
+
+.top-players .trophy {
+  max-width: 150px;
+  margin: auto;
+}
+
+.top-players h2 {
+  text-align: center;
+  margin-bottom: 30px;
+  color: #673ab7;
+}
+
+.top-players table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: center;
+}
+
+.top-players thead {
+  background: #ffdd7f;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+.top-players th {
+  color: #2e2c2c;
+  font-weight: 400;
+  padding: 15px 10px;
+}
+
+.top-players td {
+  background-color: #fafafa;
+  padding: 15px 10px;
+  border-bottom: 1px solid #e7e7e7;
+}
+
+.top-players .button {
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 25px;
+  background-color: #673ab7;
+  color: #fff;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 300;
+  text-transform: uppercase;
+}
+
+/* TOP PLAYERS  */
+
+main.catch-balls .game-details {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 20px;
+  position: sticky;
+  z-index: 9999;
+}
+
+main.catch-balls .card {
+  width: 280px;
+  padding: 25px;
+  border-radius: 5px;
+  margin-bottom: 15px;
+  border: 2px solid #673ab7;
+  background-color: #15003a;
+  text-align: center;
+  position: relative;
+}
+
+main.catch-balls .card .life-chances {
+  position: absolute;
+  bottom: -48px;
+  color: #fff;
+  font-weight: 900;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+}
+
+main.catch-balls .card .life-chances .life-heart {
+  width: 32px;
+  height: 32px;
+}
+
+main.catch-balls .game-details .card h3,
+main.catch-balls .game-details .card h4 {
+  font-weight: 500;
+  color: #b992ff;
+}
+
+main.catch-balls .game-details .card h3 {
+  font-size: 1.05rem;
+  margin-bottom: 7px;
+}
+
+main.catch-balls .game-details .card h4 {
+  font-size: 0.9rem;
+  font-weight: 300;
+}
+
+main.catch-balls .ball {
+  height: 65px;
+  width: 65px;
+  border-radius: 50%;
+  background: #fff;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  font-weight: 700;
+  cursor: pointer;
+  font-size: 1.5rem;
+  position: absolute;
+  top: -200px;
+  transition: all 0.5s linear;
+}
+
+main.catch-balls .game-settings {
+  position: absolute;
+  bottom: 25px;
+  left: 45px;
+}
+
+main.catch-balls .game-settings ul {
+  display: flex;
+}
+
+main.catch-balls .game-settings ul li {
+  margin-right: 10px;
+  display: flex;
+}
+
+main.catch-balls .game-settings button {
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-right: 5px;
+}
+
+main.catch-balls .game-settings button.change-background-btn {
+  display: flex;
+  align-items: center;
+}
+
+main.catch-balls .game-settings button.change-background-btn span {
+  font-weight: 700;
+  margin-left: 7px;
+}
+
+main.catch-balls .game-settings .icon-image {
+  width: 32px;
+  height: 32px;
+}
+
+.hide-bale {
+  animation-name: hideBale;
+  animation-duration: 0.5s;
+  animation-timing-function: ease-in-out;
+  transition: all 0.5s ease-in-out;
+  top: 200px;
+}
+
+@keyframes hideBale {
+  0% {
+    top: 100px;
+    opacity: 1;
+  }
+  50% {
+    top: 70px;
+  }
+  100% {
+    top: 200px;
+    opacity: 0;
+  }
+}
+
+.boom-ball {
+  height: 65px;
+  width: 65px;
+  position: absolute;
+  top: -200px;
+  transition: all 0.5s linear;
+  background: url('../imgs/boom-ball.png') no-repeat center center;
+  background-size: cover;
+}
+
+#game-status {
+  position: absolute;
+  width: 500px;
+  background: #fff;
+  padding: 2rem;
+  border: 5px solid #ececec;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  min-height: 225px;
+  text-align: center;
+}
+
+#game-status #win img {
+  max-width: 50px;
+  display: inline-block;
+  margin: auto;
+  text-align: center;
+}
+
+#game-status h3 {
+  color: #673ab7;
+  font-size: 1.6rem;
+  margin-bottom: 5px;
+}
+
+#game-status h4 {
+  font-size: 15px;
+  font-weight: 400;
+  color: #424242;
+  margin-bottom: 5px;
+}
+
+#game-status button {
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  background-color: #673ab7;
+  color: #fff;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 300;
+  text-transform: uppercase;
+  width: 150px;
+  margin-top: 20px;
+}
+
+.opacity-0 {
+  animation-name: opacity-0;
+  animation-duration: .5s;
+  animation-iteration-count: 1;
+  animation-timing-function: linear;
+  opacity: 0;
+}
+
+@keyframes opacity-0 {
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+  }
+}
+
+.top-player-show-btn {
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  background-color: #673ab7;
+  color: #fff;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 300;
+  text-transform: uppercase;
+  width: 150px;
+  margin-top: 20px;
+}
+
+@media  (max-width: 500px ) {
+  #game-status {
+    width: 340px;
+  }
+}
